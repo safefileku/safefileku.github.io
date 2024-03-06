@@ -1,6 +1,6 @@
 // Simpan data aplikasi dalam file JSON
 const appData = [
-    { nama: "Aplikasi 1", ukuran: "10 MB", linkDownload: "https://example.com/download/app1" },
+    { nama: "JioSaavn_v9.1.1_mod", ukuran: "35.51 MB", linkDownload: "https://safefileku.com/download/Yi1Qk5i6rDKhyUI1" },
     { nama: "Aplikasi 2", ukuran: "15 MB", linkDownload: "https://example.com/download/app2" },
     { nama: "anu", ukuran: "10 mb MB", linkDownload: "http" },
     // Tambahkan data aplikasi lainnya sesuai kebutuhan
