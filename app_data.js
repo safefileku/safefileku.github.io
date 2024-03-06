@@ -1,8 +1,12 @@
 // Simpan data aplikasi dalam file JSON
 const appData = [
     { nama: "JioSaavn_v9.1.1_mod", ukuran: "35.51 MB", linkDownload: "https://safefileku.com/download/Yi1Qk5i6rDKhyUI1" },
-    { nama: "Aplikasi 2", ukuran: "15 MB", linkDownload: "https://example.com/download/app2" },
-    { nama: "anu", ukuran: "10 mb MB", linkDownload: "http" },
+    { nama: "Parallel_Space_Pro_v4.0.9268_Android_9+_mod", ukuran: "15.80 MB", linkDownload: "https://safefileku.com/download/1M7snydGruw7rHkf" },
+    { nama: "CCleaner_v6.8.0_b800009929_Mod", ukuran: "38.57 MB", linkDownload: "https://safefileku.com/download/1M7snydGruw7rHkf" },
+    { nama: "Psiphon_Pro_376_376_774d5d", ukuran: "18.66 MB", linkDownload: "https://safefileku.com/download/ShXVMnU4ClnJgPOV" },
+    { nama: "Mivo_v3.26.565_Premium", ukuran: "108.83 MB", linkDownload: "https://safefileku.com/download/Pqe1DoTnl1BTAboL" },
+    { nama: "Puffin_Cloud_Browser_9.9.0.51519_51519200_ca2a67", ukuran: "32.43 MB", linkDownload: "https://safefileku.com/download/NupX4rwDXcPysFS7" },
+    { nama: "Reface_3.33.0_348_789f73", ukuran: "57.95 MB", linkDownload: "https://safefileku.com/download/UjkGQruc9ZaTIMBs" },
     // Tambahkan data aplikasi lainnya sesuai kebutuhan
 ];
 
