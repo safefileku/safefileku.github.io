@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #data-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 80%;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        input[type="submit"], button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button {
+            margin-left: 5px;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="data-form">
+        <h2>Form Data Generator</h2>
+        <form id="generator-form">
+            <label for="appName">Nama:</label>
+            <input type="text" id="appName" name="appName" placeholder="Masukkan nama aplikasi" required>
+
+            <label for="appSize">Ukuran:</label>
+            <input type="text" id="appSize" name="appSize" placeholder="Masukkan ukuran aplikasi" required>
+
+            <label for="appLink">Link Download:</label>
+            <input type="text" id="appLink" name="appLink" placeholder="Masukkan tautan unduh" required>
+
+            <input type="submit" value="Generate">
+        </form>
+
+        <button onclick="copyToClipboard()">Copy Hasil</button>
+
+        <div id="result">
+            <!-- Hasil akan ditampilkan di sini -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('generator-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const appName = document.getElementById('appName').value;
+            const appSize = document.getElementById('appSize').value;
+            const appLink = document.getElementById('appLink').value;
+
+            const result = `{ nama: "${appName}", ukuran: "${appSize} MB", linkDownload: "${appLink}" },`;
+
+            document.getElementById('result').innerText = result;
+        });
+
+        function copyToClipboard() {
+            const resultText = document.getElementById('result');
+            const textarea = document.createElement('textarea');
+            textarea.value = resultText.innerText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Hasil telah disalin!');
+        }
+    </script>
+</body>
+</html>
