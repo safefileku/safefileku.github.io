@@ -23,6 +23,8 @@ const appData = [
     { nama: "U Dictionary v6.1.0 MOD", ukuran: "29.56 MB", linkDownload: "https://safefileku.com/download/mfEH04QBVotUekS" },
     { nama: "Truecaller v12.25.8 MOD", ukuran: "68.45 MB", linkDownload: "https://safefileku.com/download/ESchQrUEE8pF1JW" },
     { nama: "Turbo VPN v3.7.4 MOD", ukuran: "18.36 MB", linkDownload: "https://safefileku.com/download/HihQltOGGpqlVju" },
+    { nama: "TikTok v24.6.3 MOD", ukuran: "67.52 MB", linkDownload: "https://safefileku.com/download/PVaWysC7Oi8RLtY" },
+    { nama: "SketchAR v6.22 play", ukuran: "182.59 MB", linkDownload: "https://safefileku.com/download/WbjyWayXOTSnDKU" },
     
     // Tambahkan data aplikasi lainnya sesuai kebutuhan
 ];
