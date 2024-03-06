@@ -27,7 +27,7 @@ function tampilkanDataAplikasi() {
             appItem.innerHTML = `
                 <strong>Nama:</strong> ${filteredApps[i].nama}<br>
                 <strong>Ukuran:</strong> ${filteredApps[i].ukuran}<br>
-                <button onclick="downloadApp('${filteredApps[i].linkDownload}')">Tombol Download</button>
+                <button onclick="downloadApp('${filteredApps[i].linkDownload}')">Download</button>
             `;
             appListContainer.appendChild(appItem);
         }
