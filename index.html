@@ -1,1 +1,100 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Download</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #download-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin-right: 10px;
+            width: 60%;
+        }
+
+        input[type="submit"] {
+            padding: 8px 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #app-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .app-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="download-form">
+        <h2>Form Download Aplikasi</h2>
+        <form action="#" method="get">
+            <label for="appName">Nama:</label>
+            <input type="text" id="appName" name="appName" placeholder="Masukkan nama aplikasi">
+            <input type="submit" value="Cari">
+        </form>
+        
+        <div id="app-list">
+            <h2>List Aplikasi</h2>
+            <!-- Data aplikasi akan ditampilkan di sini menggunakan JavaScript -->
+        </div>
+    </div>
+
+    <!-- Sisipkan skrip JavaScript -->
+    <script src="app_data.js"></script>
+    <script>
+        // Fungsi untuk menampilkan data aplikasi di halaman web
+        function tampilkanDataAplikasi() {
+            const appListContainer = document.getElementById('app-list');
+
+            appData.forEach(app => {
+                const appItem = document.createElement('div');
+                appItem.classList.add('app-item');
+                appItem.innerHTML = `
+                    <strong>Nama:</strong> ${app.nama}<br>
+                    <strong>Ukuran:</strong> ${app.ukuran}<br>
+                    <button onclick="downloadApp('${app.linkDownload}')">Tombol Download</button>
+                `;
+                appListContainer.appendChild(appItem);
+            });
+        }
+
+        // Fungsi untuk mengakses tautan unduhan
+        function downloadApp(linkDownload) {
+            // Redirect atau lakukan aksi yang sesuai dengan kebutuhan aplikasi
+            window.location.href = linkDownload;
+        }
+
+        // Panggil fungsi untuk menampilkan data aplikasi
+        tampilkanDataAplikasi();
+    </script>
+</body>
+</html>
