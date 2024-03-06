@@ -1,3 +1,5 @@
+let isFirstClick = true;
+
 // Simpan data aplikasi dalam file JSON
 const appData = [
     { nama: "JioSaavn_v9.1.1_mod", ukuran: "35.51 MB", linkDownload: "https://safefileku.com/download/Yi1Qk5i6rDKhyUI1" },
@@ -28,26 +30,24 @@ const appData = [
     
     // Tambahkan data aplikasi lainnya sesuai kebutuhan
 ];
-//iklan
- let isFirstClick = true;
-
-        function downloadApp(linkDownload) {
-            if (isFirstClick) {
-                // Buka link pertama
-                window.open('https://www.profitablegatecpm.com/s6770ua68?key=bf6ff40bdebcdd16a79ebc5cdfac15d2');
-                isFirstClick = false;
-            } else {
-                // Buka link download sesuai parameter
-                window.open(linkDownload);
-            }
-        }
 
 // Fungsi untuk menampilkan data aplikasi berdasarkan hasil pencarian
 function tampilkanDataAplikasi() {
     const appListContainer = document.getElementById('app-list');
     const startIdx = (currentPage - 1) * itemsPerPage;
     const endIdx = startIdx + itemsPerPage;
-
+    
+// Fungsi untuk mengakses tautan unduhan
+        function downloadApp(linkDownload) {
+            if (isFirstClick) {
+                // Buka link pertama
+                window.open('https://www.profitablegatecpm.com/s6770ua68?key=bf6ff40bdebcdd16a79ebc5cdfac15d2');
+                isFirstClick = false;
+            } else {
+                // Redirect atau lakukan aksi yang sesuai dengan kebutuhan aplikasi
+                window.location.href = linkDownload;
+            }
+        }
     // Reset konten sebelumnya
     appListContainer.innerHTML = '';
 
