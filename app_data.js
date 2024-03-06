@@ -2,6 +2,7 @@
 const appData = [
     { nama: "Aplikasi 1", ukuran: "10 MB", linkDownload: "https://example.com/download/app1" },
     { nama: "Aplikasi 2", ukuran: "15 MB", linkDownload: "https://example.com/download/app2" },
+    { nama: "anu", ukuran: "10 mb MB", linkDownload: "http" },
     // Tambahkan data aplikasi lainnya sesuai kebutuhan
 ];
 
