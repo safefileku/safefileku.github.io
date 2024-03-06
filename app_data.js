@@ -19,6 +19,10 @@ const appData = [
     { nama: "VIU Premium v1.1.14 MOD", ukuran: "20.79 MB", linkDownload: "https://safefileku.com/download/QUEsqMt7tPuH6S2" },
     { nama: "Videoder v14.5 MOD", ukuran: "9.51 MB", linkDownload: "https://safefileku.com/download/BtglBCwzmN0yYuh" },
     { nama: "Vanced Manager v2.6.2", ukuran: "4.26 MB", linkDownload: "https://safefileku.com/download/AOVTI7NhImf7eU5" },
+    { nama: "uTorrent Pro v6.8.6", ukuran: "17.01 MB", linkDownload: "https://safefileku.com/download/aAp9puJNOZ5bSt1" },
+    { nama: "U Dictionary v6.1.0 MOD", ukuran: "29.56 MB", linkDownload: "https://safefileku.com/download/mfEH04QBVotUekS" },
+    { nama: "Truecaller v12.25.8 MOD", ukuran: "68.45 MB", linkDownload: "https://safefileku.com/download/ESchQrUEE8pF1JW" },
+    { nama: "Turbo VPN v3.7.4 MOD", ukuran: "18.36 MB", linkDownload: "https://safefileku.com/download/HihQltOGGpqlVju" },
     
     // Tambahkan data aplikasi lainnya sesuai kebutuhan
 ];
