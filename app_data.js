@@ -28,6 +28,19 @@ const appData = [
     
     // Tambahkan data aplikasi lainnya sesuai kebutuhan
 ];
+//iklan
+ let isFirstClick = true;
+
+        function downloadApp(linkDownload) {
+            if (isFirstClick) {
+                // Buka link pertama
+                window.open('https://www.profitablegatecpm.com/s6770ua68?key=bf6ff40bdebcdd16a79ebc5cdfac15d2');
+                isFirstClick = false;
+            } else {
+                // Buka link download sesuai parameter
+                window.open(linkDownload);
+            }
+        }
 
 // Fungsi untuk menampilkan data aplikasi berdasarkan hasil pencarian
 function tampilkanDataAplikasi() {
