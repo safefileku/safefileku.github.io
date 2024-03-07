@@ -1,5 +1,51 @@
-// Simpan data aplikasi dalam file JSON
-const appData = [
+let appData = [
+    // Data aplikasi Anda di sini (sudah ada pada kode sebelumnya)
+];
+
+// Fungsi untuk menampilkan data aplikasi berdasarkan hasil pencarian
+function tampilkanDataAplikasi() {
+    const appListContainer = document.getElementById('app-list');
+    appListContainer.innerHTML = ''; // Bersihkan konten sebelumnya
+
+    let searchQuery = document.getElementById('appName').value.toLowerCase();
+    const filteredApps = appData.filter(app => app.nama.toLowerCase().includes(searchQuery));
+
+    if (filteredApps.length > 0) {
+        filteredApps.forEach((app, index) => {
+            const appItem = document.createElement('div');
+            appItem.classList.add('app-item');
+            appItem.innerHTML = `
+                <strong>Nama:</strong> ${app.nama}<br>
+                <strong>Ukuran:</strong> ${app.ukuran}<br>
+                <button id="downloadBtn-${index}" data-clicked="false">Download</button>
+            `;
+            appListContainer.appendChild(appItem);
+
+            document.getElementById(`downloadBtn-${index}`).addEventListener('click', function() {
+                handleDownloadButtonClick(app.linkDownload, this);
+            });
+        });
+    } else {
+        const noResultMessage = document.createElement('p');
+        noResultMessage.textContent = 'Tidak ada hasil yang ditemukan.';
+        appListContainer.appendChild(noResultMessage);
+    }
+}
+
+// Fungsi untuk menangani klik button download
+function handleDownloadButtonClick(linkDownload, buttonElement) {
+    const isClicked = buttonElement.getAttribute('data-clicked') === 'true';
+    
+    if (!isClicked) {
+        window.open('https://www.profitablegatecpm.com/s6770ua68?key=bf6ff40bdebcdd16a79ebc5cdfac15d2', '_blank');
+        buttonElement.setAttribute('data-clicked', 'true');
+    } else {
+        window.location.href = linkDownload;
+    }
+}
+
+// Anda bisa menambahkan data aplikasi Anda di bawah ini, contoh:
+appData = [
     { nama: "JioSaavn_v9.1.1_mod", ukuran: "35.51 MB", linkDownload: "https://safefileku.com/download/Yi1Qk5i6rDKhyUI1" },
     { nama: "Parallel_Space_Pro_v4.0.9268_Android_9+_mod", ukuran: "15.80 MB", linkDownload: "https://safefileku.com/download/1M7snydGruw7rHkf" },
     { nama: "CCleaner_v6.8.0_b800009929_Mod", ukuran: "38.57 MB", linkDownload: "https://safefileku.com/download/1M7snydGruw7rHkf" },
@@ -26,43 +72,5 @@ const appData = [
     { nama: "TikTok v24.6.3 MOD", ukuran: "67.52 MB", linkDownload: "https://safefileku.com/download/PVaWysC7Oi8RLtY" },
     { nama: "SketchAR v6.22 play", ukuran: "182.59 MB", linkDownload: "https://safefileku.com/download/WbjyWayXOTSnDKU" },
     
-    // Tambahkan data aplikasi lainnya sesuai kebutuhan
+    // dan seterusnya...
 ];
-
-// Fungsi untuk menampilkan data aplikasi berdasarkan hasil pencarian
-function tampilkanDataAplikasi() {
-    const appListContainer = document.getElementById('app-list');
-    const startIdx = (currentPage - 1) * itemsPerPage;
-    const endIdx = startIdx + itemsPerPage;
-
-    // Reset konten sebelumnya
-    appListContainer.innerHTML = '';
-
-    // Tampilkan data aplikasi sesuai hasil pencarian
-    let searchQuery = document.getElementById('appName').value.toLowerCase();
-
-    const filteredApps = appData.filter(app => app.nama.toLowerCase().includes(searchQuery));
-
-    if (filteredApps.length > 0) {
-        for (let i = startIdx; i < Math.min(endIdx, filteredApps.length); i++) {
-            const appItem = document.createElement('div');
-            appItem.classList.add('app-item');
-            appItem.innerHTML = `
-                <strong>Nama:</strong> ${filteredApps[i].nama}<br>
-                <strong>Ukuran:</strong> ${filteredApps[i].ukuran}<br>
-                <button onclick="downloadApp('${filteredApps[i].linkDownload}')">Download</button>
-            `;
-            appListContainer.appendChild(appItem);
-        }
-    } else {
-        const noResultMessage = document.createElement('p');
-        noResultMessage.textContent = 'Tidak ada hasil yang ditemukan.';
-        appListContainer.appendChild(noResultMessage);
-    }
-}
-
-// Fungsi untuk mengakses tautan unduhan
-function downloadApp(linkDownload) {
-    // Redirect atau lakukan aksi yang sesuai dengan kebutuhan aplikasi
-    window.location.href = linkDownload;
-}
